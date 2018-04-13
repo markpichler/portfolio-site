@@ -1,0 +1,246 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+}
+
+html { background: url(../img/beachBG.jpg) center / cover no-repeat fixed; }
+
+body { padding: 10px; }
+
+a {
+	color: white;
+	text-decoration: none;
+}
+
+a:hover { color: green; }
+
+.well {
+	box-shadow: 3px 1px 17px 2px black;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-direction: column;
+	flex-direction: column;
+}
+
+/* HEADER */
+header {
+	-webkit-align-items: center;
+	align-items: center;
+	background: #181c1f;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	flex-wrap: wrap;
+	font: 300 2.5em "Raleway", sans-serif;
+	padding: 9px;
+}
+
+/* HEADER - Logo */
+.logo {
+	background-color: white;
+	border-radius: 12px;
+	height: 60px;
+	margin-right: 8px;
+	overflow: hidden;
+	width: 60px;
+}
+
+.logo > :nth-child(1) {
+	font-size: 21px;
+	left: 5px;
+    position: relative;
+    top: -16px;
+}
+
+.logo > :nth-child(2) {
+	font-size: 70px;
+	left: -4px;
+    position: relative;
+    top: -54px;
+}
+
+/* HEADER - Title */
+.title {
+	color: white;
+	display: -webkit-flex;
+	display: flex;
+}
+
+.title h1 { font: inherit; }
+
+small {
+	-webkit-align-self: flex-end;
+	align-self: flex-end;
+	color: #777;
+	font-size: 65%;
+    margin-bottom: 3px;
+}
+
+/* HEADER - Contacts */
+.contacts {
+	font-size: 35px;
+	margin-left: auto;
+}
+
+.contacts a { margin-left: 15px; }
+
+/* MAIN */
+main {
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-direction: column;
+	flex-direction: column;
+}
+
+/* MAIN - Sections */
+.upper,
+.lower {
+	background-color: #181c1f;
+	display: -webkit-flex;
+	display: flex;
+}
+
+.upper {
+	height: 275px;
+	border-bottom: 1px solid white;
+	border-top: 1px solid white;
+	opacity: 0.6;
+}
+
+.upper p {
+	color: white;
+	font: 300 2.5em "Roboto", sans-serif;
+	margin: auto;
+	text-align: center;
+	text-shadow: 2px 2px 4px #ffffff;
+}
+
+.lower {
+	-webkit-flex-wrap: wrap;
+	flex-wrap: wrap;
+	-webkit-justify-content: space-around; 
+	justify-content: space-around;
+	text-align: justify;
+}
+
+.lower i {
+	border-bottom: 1px solid white;
+	color: white;
+	display: block;
+	font-size: 36px;
+	margin: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+.myself img { 
+	border-radius: 12px;
+	float: left; 
+	margin-right: 10px;
+	width: 100px;
+}
+
+.skills,
+.projects {
+	text-align: center;
+}
+
+table {
+	table-layout: fixed;
+	width: 100%;
+}
+
+td { padding: 15px; }
+
+.projects-list {
+	display: block;
+	height: 378px;
+	overflow-y: scroll; 
+}
+
+.projects img {
+	margin-bottom: 20px;
+	width: 200px;
+}
+
+.skills h1,
+.projects h1 {
+	font-family: "Raleway", sans-serif;
+	margin-bottom: 10px;
+}
+
+.myself,
+.skills,
+.projects {
+	font-family: "Roboto", sans-serif;
+	color: white;
+	width: 375px;
+	margin: 0 10px 10px 10px;
+}
+
+.myself,
+.projects { height: 485px; }
+
+/* Text animation */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  
+  to {
+    opacity: 1;
+  }
+}
+
+p span {
+	animation: fade-in 4s forwards;
+	opacity: 0;
+}
+p span:nth-child(1){
+	animation-delay: 1.5s;
+}
+p span:nth-child(2){
+	animation-delay: 2.5s;
+}
+p span:nth-child(3){
+	animation-delay: 3.5s;
+}
+p span:nth-child(4){
+	animation-delay: 4.5s;
+}
+
+/* Media queries */
+@media screen and (max-width: 404px) {
+	html {
+		min-width: 387px;
+	}
+	
+}
+
+@media screen and (max-width: 635px) {
+	header {
+		-webkit-justify-content: center; 
+		justify-content: center;
+	}
+	.contacts {
+		-webkit-flex-basis: 100%;
+		flex-basis: 100%;
+		margin: 10px 0 0 0;
+	}
+	
+}
+
+@media screen and (max-width: 875px) {
+	.contacts {
+		display: -webkit-flex;
+		display: flex;
+		-webkit-flex-grow: 1;
+		flex-grow: 1;
+		-webkit-justify-content: space-around; 
+		justify-content: space-around;
+	}
+	.title {
+		-webkit-flex-direction: column;
+		flex-direction: column;
+	}
+}
